@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #171717;
+  --color-accent: #059669;
+  --color-bg: #ffffff;
+  --color-text: #262626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: #262626;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 艺术字体样式 */
+.font-artistic {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.font-elegant {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+
+/* Custom scrollbar - 简洁风格 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* Selection */
+::selection {
+  background: rgba(5, 150, 105, 0.15);
+  color: #065f46;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Graph canvas styles - 白底 */
+.graph-container {
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+/* Node styles */
+.graph-node {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.graph-node:hover {
+  filter: brightness(1.1);
+}
+
+/* Link styles */
+.graph-link {
+  stroke-opacity: 0.4;
+  transition: stroke-opacity 0.3s ease;
+}
+
+.graph-link:hover {
+  stroke-opacity: 0.8;
+}
+
+/* Card styles - 简洁边框 */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #d4d4d4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Button styles */
+.btn-primary {
+  background: #171717;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #262626;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #171717;
+  border: 1px solid #e5e5e5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #171717;
+}
+
+/* Input styles */
+.input {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #171717;
+  outline: none;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e5e5, transparent);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f5f5f5 25%, #e5e5e5 50%, #f5f5f5 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Decorative elements */
+.ornament {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #171717, transparent);
+}
+
+.ornament-vertical {
+  display: inline-block;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, #171717, transparent);
+}
+
+/* Quote style */
+.quote {
+  border-left: 3px solid #171717;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: #525252;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
